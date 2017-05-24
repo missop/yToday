@@ -18,23 +18,7 @@ angular.module('Controller', [])
         ]
 
     }])
-//今日一刻
-  /*  .controller('todayController',['$scope','$http','$filter', function ($scope,$http,$filter) {
 
-     //获得计算机时间
-     var today = $filter('date')(new Date,'yyyy-MM-tt');
-
-
-
-     $http({
-     url:'./api/today.php',
-     params:{today:today}
-     }).success(function (info) {
-     console.log(info);
-     })
-
-
-     }])*/
     .controller('todayController',['$scope','$http','$filter','$rootScope', function ($scope,$http,$filter,$rootScope) {
 
         var today = $filter('date')(new Date,'yyyy-MM-dd');
